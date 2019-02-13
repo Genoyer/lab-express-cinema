@@ -2,6 +2,19 @@
 <h1>{{movie.title}}</h1>
 <h2>Director: {{movie.director}}</h2>
 <h2>Stars</h2>
-<p>Plot: {{movie.description}}</p>
-<p>Showtimes:</p>
+<p><ul>
+    {{#each movie.stars}}
+    <li>{{this}}</li>
+    {{/each}}
+</ul></p>
+<h2>Plot:</h2>
+    <p>{{movie.description}}</p>
+<h2>Showtimes:</h2>
+    <p>
+    <ul>
+    {{#each movie.showtimes}}
+    <li>{{this}}</li>
+    {{/each}}
+    </ul>
+    </p>
 <p><a href='/movies'>BACK</a></p>
